@@ -1,0 +1,42 @@
+//Google font
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap');
+
+// General
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    // outline: 1px solid yellow;
+}
+
+//Variable
+$colors:(
+    01: #000000,
+    02: #FFFFFF,
+    03: #010313,
+    04: #17A1FA,
+    05: #40FFC7,
+    06: #020625,
+    07: #4d4d53,
+    08: #11101D,
+    09: #808088,
+    10: #ff0000
+);
+
+// Function
+@function gc($key){
+    @return map-get($colors, $key);
+}
+
+// Mixin
+@mixin mobile{
+    @media (max-width: 690.1px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media (max-width: 890.1px){
+        @content;
+    }
+}
